@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"  >
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&family=Kaushan+Script&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+:root{
+  --inner:'inner' ,sans-serif ;
+--Kaushan:'Kaushan Script' ,cursive ;
+--mont : 'Montserrat' ,sans-serif ;
+}
+*{
+padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+body{
+line-height: 1.5;
+font-family: var(--Mont);
+background-color: purple;
+color: white;
+}
+.menu{
+margin: 2rem 0;
+}
+.menu-container{
+max-width: 1280px;
+margin: 0 auto;
+padding: 0 1rem;
+}
+img{
+
+  width: 100%;
+  display: block;
+}
+.menu-head{
+text-align: center;
+}
+.menu-head h2{
+font-family: var(--Kaushan);
+font-size: 2.6rem;
+}
+.menu-head p{
+font-weight: 300;
+padding: 1.8rem 0;
+}
+.menu-btns{
+padding: 0.6rem 0;
+display: flex;
+justify-content: center;
+}
+.menu-btn{
+font-family: var(--inter);
+text-transform: uppercase;
+font-size: 1.1rem;
+font-weight: 600;
+background: none;
+border: none;
+color: yellowgreen;
+display:block;
+margin: 0 1rem;
+cursor: pointer;
+outline: 0;
+transition: opacity 0.4rs ease-out;
+}
+.menu-btn ::after{
+content:'' ;
+display: block;
+height: 2px;
+margin-left: auto;
+margin-right:auto ;
+background: orangered;
+margin-top: 0.5rem;
+width: 0;
+transition: width 0.4s ease-out;
+}
+.menu-btn :hover ::after{
+  width: 100%;
+}
+.menu-btn :hover{
+opacity: 0.8;
+}
+.active-btn{
+  color: white;
+}
+.food-items{
+  margin:2rem 0;
+}
+.food-item{
+border-radius: 4px;
+overflow: hidden;
+background: white;
+color: black;
+margin: 0.6rem 0;
+box-shadow: 0 0 16ps -4px rgba(0, 0,0 0.75);
+display: ;
+animation: fadeIn 2s;
+}
+@keyframes fadeIn{
+from{
+  opacity: 0;
+}
+to{
+  opacity: 1;
+}
+}
+.food-img  img{
+border-radius: 4px;
+}
+.food-content{
+  padding: 1rem;
+}
+/* .food-content{
+padding: 1rem;
+margin-top:-150px ;
+margin-left: 500px;
+} */
+.food-name{
+  font-family: var(--inter);
+  color: orange;
+  font-weight: 500;
+
+text-transform: capitalize;}
+.food-price{
+  padding: 0.4rem 0;
+font-weight: 600;
+font-size: 1.4rem;
+opacity: 0.8;
+}
+.ratting{
+display: flex;
+list-style: none;
+}
+.ratting .fa-star{
+margin-right: 0.4rem;
+color: indigo;
+}
+.category{
+padding-top: 0.2rem;
+font-size: 1rem;
+font-weight: 800;
+font-family: var(--Inter);
+color: black;
+}
+.category span{
+  font-weight: 500;
+}
+@media screen and (min-width:100px){
+  .food-item{
+display: grid;
+grid-template-columns: 15% auto;
+align-items: center;
+padding: 1rem;
+column-gap: 1rem;
+
+  }
+}
+</style>
+<body>
+  <section class="menu">
+<div class="menu-container">
+<div class="menu-head">
+  <h2>Special Food menue</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptate, animi illum aperiam placeat sapiente qui exercitationem expedita, saepe omnis labore! Ab debitis consequuntur saepe delectus facilis numquam, magnam nemo.</p>
+</div>
+<div class="menu-btns">
+<button type="button" class="menu-btn active-btn" id="featured" >
+Featured
+</button>
+<button type="button" class="menu-btn" id="today-special">
+Today's Special
+</button>
+<button type="button" class="menu-btn" id="new-arrival">
+New Arrival
+</button>
+</div>
+<div class="food-items">
+  <div class="food-item featured">
+    <div class="food-img">
+      <img src="1.jpg" alt="food img">
+  
+    </div>
+  </div>
+  <div class="food-content">
+  <h2 class="food-name"> Burger with chips and bread</h2>
+  </div>
+  <div class="line">
+  <h3 class="Food Price">$25.00</h3>
+  <ul class="ratting">
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  </ul>
+  <p class="category">
+  Categories:
+  <span>Featured</span>
+  </p>
+  </div>
+  </div>
+
+  <div class="food-item  today-special">
+  <img src="2.jpg" alt="food img">
+  </div>
+  <div class="food-content">
+  <h2 class="food-name"> burger with double egg</h2>
+  </div>
+  <div class="line">
+  <h3 class="Food Price">$35.00</h3>
+  <ul class="ratting">
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  </ul>
+  <p class="category">
+  Categories:
+  <span>Today Special</span>
+  </p>
+  </div>
+  </div>
+  
+    <div class="food-item  new-arrival">
+    <img src="3.jpg" alt="food img">
+    </div>
+    <div class="food-content">
+    <h2 class="food-name">burger zinger</h2>
+    </div>
+    <div class="line">
+    <h3 class="Food Price">$45.00</h3>
+    <ul class="ratting">
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    </ul>
+    <p class="category">
+    Categories:
+    <span>New Arrival</span>
+    </p>
+    </div>
+    </div>
+
+<!-- end item -->
+
+
+<div class="food-item  today-special">
+  <img src="5.jpg" alt="food img">
+  </div>
+  <div class="food-content">
+    <h2 class="food-name"> Double Shawarma</h2>
+  </div>
+  <div class="line">
+  <h3 class="Food Price">$50.00</h3>
+  <ul class="ratting">
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  </ul>
+  <p class="category">
+  Categories:
+  <span>Featured</span>
+  </p>
+  </div>
+  </div>
+
+  <div class="food-item  today-special">
+  <img src="4.jpg" alt="food img">
+  </div>
+  <div class="food-content">
+  <h2 class="food-name">Plated Shawarma</h2>
+  </div>
+  <div class="line">
+  <h3 class="Food Price">$80.00</h3>
+  <ul class="ratting">
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  <li><i class="fas fa-star"></i></li>
+  </ul>
+  <p class="category">
+  Categories:
+  <span>Today Special</span>
+  </p>
+  </div>
+  </div>
+  
+    <div class="food-item  new-arrival">
+    <img src="6.jpg" alt="food img">
+    </div>
+    <div class="food-content">
+    <h2 class="food-name">Double Shawarma</h2>
+    </div>
+    <div class="line">
+    <h3 class="Food Price">$60.00</h3>
+    <ul class="ratting">
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    </ul>
+    <p class="category">
+    Categories:
+    <span>New Arrival</span>
+    </p>
+    </div>
+    </div>
+
+
+
+
+
+    <div class="food-item  today-special">
+      <img src="7.jpg" alt="food img">
+      </div>
+      <div class="food-content">
+        <h2 class="food-name"> Breads with pinuts </h2>
+      </div>
+      <div class="line">
+      <h3 class="Food Price">$50.00</h3>
+      <ul class="ratting">
+      <li><i class="fas fa-star"></i></li>
+      <li><i class="fas fa-star"></i></li>
+      <li><i class="fas fa-star"></i></li>
+      <li><i class="fas fa-star"></i></li>
+      <li><i class="fas fa-star"></i></li>
+      <li><i class="fas fa-star"></i></li>
+      </ul>
+      <p class="category">
+      Categories:
+      <span>Featured</span>
+      </p>
+      </div>
+      </div>
+    
+      <div class="food-item  today-special">
+      <img src="8.jpg" alt="food img">
+      </div>
+      <div class="food-content">
+      <h2 class="food-name">braed for brakfast</h2>
+      </div>
+      <div class="line">
+      <h3 class="Food Price">$80.00</h3>
+      <ul class="ratting">
+      <li><i class="fas fa-star"></i></li>
+      <li><i class="fas fa-star"></i></li>
+      <li><i class="fas fa-star"></i></li>
+      <li><i class="fas fa-star"></i></li>
+      <li><i class="fas fa-star"></i></li>
+      <li><i class="fas fa-star"></i></li>
+      </ul>
+      <p class="category">
+      Categories:
+      <span>Today Special</span>
+      </p>
+      </div>
+      </div>
+      
+        <div class="food-item  new-arrival">
+        <img src="9.jpg" alt="food img">
+        </div>
+        <div class="food-content">
+        <h2 class="food-name">Bread with biscut</h2>
+        </div>
+        <div class="line">
+        <h3 class="Food Price">$60.00</h3>
+        <ul class="ratting">
+        <li><i class="fas fa-star"></i></li>
+        <li><i class="fas fa-star"></i></li>
+        <li><i class="fas fa-star"></i></li>
+        <li><i class="fas fa-star"></i></li>
+        <li><i class="fas fa-star"></i></li>
+        <li><i class="fas fa-star"></i></li>
+        </ul>
+        <p class="category">
+        Categories:
+        <span>New Arrival</span>
+        </p>
+        </div>
+        </div>
+
+
+
+
+
+        <div class="food-item  today-special">
+          <img src="10.jpg" alt="food img">
+          </div>
+          <div class="food-content">
+            <h2 class="food-name"> A  cup of tea</h2>
+          </div>
+          <div class="line">
+          <h3 class="Food Price">$50.00</h3>
+          <ul class="ratting">
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          </ul>
+          <p class="category">
+          Categories:
+          <span>Featured</span>
+          </p>
+          </div>
+          </div>
+        
+          <div class="food-item  today-special">
+          <img src="11.jpg" alt="food img">
+          </div>
+          <div class="food-content">
+          <h2 class="food-name">Tea with coffre</h2>
+          </div>
+          <div class="line">
+          <h3 class="Food Price">$80.00</h3>
+          <ul class="ratting">
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          </ul>
+          <p class="category">
+          Categories:
+          <span>Today Special</span>
+          </p>
+          </div>
+          </div>
+          
+            <div class="food-item  new-arrival">
+            <img src="12.jpg" alt="food img">
+            </div>
+            <div class="food-content">
+            <h2 class="food-name">Kehwa with sugar</h2>
+            </div>
+            <div class="line">
+            <h3 class="Food Price">$60.00</h3>
+            <ul class="ratting">
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p class="category">
+            Categories:
+            <span>New Arrival</span>
+            </p>
+            </div>
+            </div>
+
+
+
+
+            <div class="food-item  today-special">
+              <img src="13.jpg" alt="food img">
+              </div>
+              <div class="food-content">
+                <h2 class="food-name"> Spiy rice</h2>
+              </div>
+              <div class="line">
+              <h3 class="Food Price">$100.00</h3>
+              <ul class="ratting">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              </ul>
+              <p class="category">
+              Categories:
+              <span>Featured</span>
+              </p>
+              </div>
+              </div>
+            
+              <div class="food-item  today-special">
+              <img src="14.jpg" alt="food img">
+              </div>
+              <div class="food-content">
+              <h2 class="food-name">Vegetable rice</h2>
+              </div>
+              <div class="line">
+              <h3 class="Food Price">$120.00</h3>
+              <ul class="ratting">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              </ul>
+              <p class="category">
+              Categories:
+              <span>Today Special</span>
+              </p>
+              </div>
+              </div>
+              
+                <div class="food-item  new-arrival">
+                <img src="15.jpg" alt="food img">
+                </div>
+                <div class="food-content">
+                <h2 class="food-name">Boiling rice</h2>
+                </div>
+                <div class="line">
+                <h3 class="Food Price">10.00</h3>
+                <ul class="ratting">
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                </ul>
+                <p class="category">
+                Categories:
+                <span>New Arrival</span>
+                </p>
+                </div>
+                </div>
+
+
+
+
+  </div>
+</div>
+
+  </section>
+  
+</body>
+</html>
